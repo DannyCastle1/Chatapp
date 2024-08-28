@@ -22,11 +22,6 @@ app.use(express.json())
 
 app.use(cors({origin: '*', credentials: true}))
 
-
-app.get('/', (req, res)=>{
-    res.send('Backend works')
-});
-
 app.use('/api/auth', authRoutes);
 
 app.use('/api/messages', messageRoutes);
